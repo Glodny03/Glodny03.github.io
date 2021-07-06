@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        scroll-behavior: smooth;
+    }
+
+
+    .about {
+        padding: 100px;
+
+    }
+
+    .row {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .row .co150 {
+        color: #111;
+        position: relative;
+        width: 48%;
+    }
+
+    .row .co150 p {
+        color: #111;
+    }
+
+    .titleText {
+        color: #111;
+        font-size: 2em;
+        font-weight: 300;
+
+    }
+
+    .titleText span {
+        color: rgb(20, 114, 11);
+        font-weight: 700;
+        font-size: 1.5em;
+
+    }
+
+    .row .co150.imgBx {
+        position: relative;
+        width: 100%;
+        min-height: 300px;
+
+    }
+
+    .row .co150 .imgBx img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 40px;
+
+    }
+
+    @media (max-width:991px) {
+        .row {
+
+            flex-direction: column;
+        }
+
+        .row .co150 {
+            position: relative;
+            width: 100%;
+        }
+
+        .row .co150 .imgBx {
+            height: 300px;
+            margin-top: 20px;
+        }
+
+    }
+</style>
+
+<body>
+    <div class="about" id="about">
+        <div class="row">
+            <div class="co150">
+                <h2 class="titleText"><span>T</span>ytuł</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Eum officiis ut animi accusantium amet eos expedita quasi dolorum sunt,
+                    laudantium explicabo iste tempore. Aliquid sint quidem consequatur,
+                    qui incidunt dicta.<br> <br>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Esse porro nisi est minus, doloribus saepe laborum laboriosam veniam sit eveniet,
+                    ad voluptatum iste odio dolores rerum nesciunt voluptas sint. Soluta!</p>
+            </div>
+            <div class="co150">
+                <div class="imgBx">
+                    <img src="./kitku.jpeg">
+                </div>
+            </div>
+        </div>
+
+    </div >
+</body>
+
+</html>

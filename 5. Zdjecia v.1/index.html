@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .EPROM_imgContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .EPROM_imgContainer img {
+        width: 25vw;
+        margin: 12px;
+        border-radius: 20px;
+    }
+
+    
+    @media(max-width: 610px) {
+        .EPROM_imgContainer img {
+            width: 90vw;
+        }
+
+        .ourArtists img {
+            width: 90vw;
+        }
+
+        .ourArtists__contentContainer {
+            max-width: 90vw;
+            text-align: center;
+        }
+    }
+</style>
+<body>
+    <div class="EPROM_imgContainer">
+        <img src="https://images.pexels.com/photos/991831/pexels-photo-991831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="fot1">
+        <img src="https://images.pexels.com/photos/3777622/pexels-photo-3777622.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="fot2">
+        <img src="https://images.pexels.com/photos/4734723/pexels-photo-4734723.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="fot3">
+    </div>
+</body>
+</html>

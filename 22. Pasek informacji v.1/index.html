@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        align-items: center;
+        background: #ffffff;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+    }
+
+    .informationBar {
+        width: 100vw;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #fff7ee;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        flex-wrap: wrap;
+    }
+
+    .informationBar--box {
+        display: flex; 
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+
+    .informationBar--element {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+        line-height: 20px;
+        font-weight: 300;
+        letter-spacing: 0.3px;
+        text-transform: uppercase;
+        flex-wrap: wrap;
+        opacity: 0.8;
+
+    }
+
+    .informationBar img {
+        width: 45px;
+        height: 45px;
+        margin: 10px;
+    }
+</style>
+<body>
+    <div class="informationBar">
+            <div class="informationBar--element">
+                <img src="./open-box.png" alt="freeShip">
+                <p>Darmowa dostawa <br> od 250 zł</p>
+            </div>
+            <div class="informationBar--element">
+                <img src="./new.png" alt="newProducts">
+                <p>Regularnie dodajemy <br> nowe produkty</p>
+            </div>
+            <div class="informationBar--element">
+                <img src="./poland.png" alt="fromPoland">
+                <p>Produkowane w <br> Polsce</p>
+            </div>
+            <div class="informationBar--element">
+                <img src="./coupon.png" alt="coupon">
+                <p>Sezonowe rabaty <br> do 80%</p>
+            </div>
+    </div>
+</body>
+</html>

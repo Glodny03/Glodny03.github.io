@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .miniBanner2__Wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+    .miniBanner2--box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        text-shadow: -2px -2px 19px rgb(255, 255, 255);
+        font-size: 40px;
+        color: white;
+
+    }
+
+    .miniBanner2--box:nth-child(1),
+    .miniBanner2--box:nth-child(2),
+    .miniBanner2--box:nth-child(3) {
+        width: 25vw;
+        height: 25vw;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        letter-spacing: 0.3px;
+        background-image: url('https://images.pexels.com/photos/5391353/pexels-photo-5391353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+    }
+
+    .miniBanner2--box:nth-child(2) {
+        background-image: url('https://images.pexels.com/photos/2062426/pexels-photo-2062426.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    }
+
+    .miniBanner2--box:nth-child(3),
+    .miniBanner2--box:nth-child(4) {
+        width: 40vw;
+        height: 25vw;
+        background-image: url('https://images.pexels.com/photos/6394610/pexels-photo-6394610.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    }
+
+    .miniBanner2--box:nth-child(4) {
+        background-image: url('https://images.pexels.com/photos/6394610/pexels-photo-6394610.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    }
+</style>
+
+<body>
+    <div class="miniBanner2__Wrapper">
+        <div class="miniBanner2--box first">
+            <p>Lorem ipsum <br> dolor</p>
+        </div>
+        <div class="miniBanner2--box">
+            <p>Lorem ipsum <br> dolor</p>
+        </div>
+        <div class="miniBanner2--box">
+            <p>Lorem ipsum <br> dolor</p>
+        </div>
+        <div class="miniBanner2--box">
+            <p>Lorem ipsum <br> dolor</p>
+        </div>
+        <div class="miniBanner2--box">
+            <p>Lorem ipsum <br> dolor</p>
+        </div>
+        <div class="miniBanner2--box">
+            <p>Lorem ipsum <br> dolor</p>
+        </div>
+    </div>
+</body>
+
+</html>

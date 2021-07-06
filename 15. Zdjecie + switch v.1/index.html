@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .switchContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .switchContainer h2 {
+        font-size: 12px;
+        color: rgb(255, 0, 0);
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+    }
+
+    .switchContainer h1 {
+        font-size: 30px;
+        font-family: 'Poppins', sans-serif;
+        text-transform: uppercase;
+    }
+
+    .switchContainer__options button {
+        margin: 0 25px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-family: 'Poppins';
+        font-size: 16px;
+    }
+
+    .switchContainer--img {
+        background-image: url('https://images.pexels.com/photos/1543793/pexels-photo-1543793.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vw;
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        padding: 50px;
+    }
+
+
+    .switchContainer--img div a {
+        border: none;
+        background-color: rgba(255, 14, 235, 0.774);
+        padding: 10px 20px;
+        font-family: 'Poppins';
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        font-size: 20px;
+        font-weight: 300;
+        color: black;
+        text-decoration: none;
+
+
+    }
+
+    .options2,
+    .options3,
+    .options4 {
+        display: none;
+    }
+
+    .options1 {
+        display: block;
+    }
+
+    .button:nth-child(1) {
+        color: red;
+    }
+
+    .switchContainer--img div p {
+        font-family: 'Poppins', sans-serif;
+        color: white;
+        text-transform: uppercase;
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+</style>
+
+<body>
+    <div class="switchContainer">
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h1>Lorem, ipsum dolor.</h1>
+        <div class="switchContainer__options">
+            <button class='switchBTN'>One</button>
+            <button class='switchBTN'>Two</button>
+            <button class='switchBTN'>Three</button>
+            <button class='switchBTN'>Four</button>
+        </div>
+        <div class="switchContainer--img">
+            <div class="options1">
+                <p>Lorem ipsum dolor sit.</p>
+                <a href="#">One</a>
+            </div>
+
+            <div class="options2">
+                <p>Vel repudiandae. Earum, suscipit..</p>
+
+                <a href="#">Two</a>
+            </div>
+
+            <div class="options3">
+                <p>Tempora quibusdam architecto expedita.</p>
+                <a href="#">Three</a>
+            </div>
+
+            <div class="options4">
+                <p>Adipisci, corrupti nihil.</p>
+                <a href="#">Four</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const switchBTN1 = document.querySelector(".switchContainer__options button:nth-child(1)"),
+            switchBTN2 = document.querySelector(".switchContainer__options button:nth-child(2)"),
+            switchBTN3 = document.querySelector(".switchContainer__options button:nth-child(3)"),
+            switchBTN4 = document.querySelector(".switchContainer__options button:nth-child(4)"),
+            options1 = document.querySelector(".options1"),
+            options2 = document.querySelector(".options2"),
+            options3 = document.querySelector(".options3"),
+            options4 = document.querySelector(".options4"),
+            allSwitch = [switchBTN1, switchBTN2, switchBTN3, switchBTN4],
+            allOptions = [options1, options2, options3, options4],
+            urlPhoto = [
+                "https://images.pexels.com/photos/1543793/pexels-photo-1543793.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+                "https://images.pexels.com/photos/4705174/pexels-photo-4705174.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+                "https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+                "https://images.pexels.com/photos/730896/pexels-photo-730896.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            ];
+        let slideNumber = 0;
+        const switchBG = document.querySelector(".switchContainer--img");
+        switchBTN1.style.color = "red";
+
+        const changeContent = (t, e, o, s) => {
+            for (let t = 0; t < allSwitch.length; t++) allSwitch[t].style.color = "black", allOptions[t].style
+                .display = "none";
+            switchBG.style.backgroundImage = `url(${t})`, e.style.color = "red", o.style.display = "block",
+                slideNumber = s
+        };
+
+        for (let t = 0; t < 4; t++) allSwitch[t].addEventListener("click", () => {
+            changeContent(urlPhoto[t], allSwitch[t], allOptions[t], t)
+        });
+
+        setInterval(() => {
+            0 == slideNumber ? switchBTN1.click() : 1 == slideNumber ? switchBTN2.click() : 2 == slideNumber ?
+                switchBTN3.click() : 3 == slideNumber && (switchBTN4.click(), slideNumber = -1), slideNumber++
+        }, 8e3);
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .miniBanner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .miniBanner--box {
+        width: 350px;
+        height: 450px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .miniBanner-BG {
+        background-image: url('./exampleIMG.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 90%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .miniBanner-BG p {
+        font-family: 'Poppins', sans-serif;
+        color: white;
+        text-transform: uppercase;
+        font-size:  90px;
+        font-weight: 600;
+        letter-spacing: 9px;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    .miniBanner--box .title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 17px;
+        letter-spacing: 0.3px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .miniBanner--box a {
+        font-weight: 300;
+        text-decoration: none;
+        color: black;
+        border-bottom: 2px solid black;
+        transition: 0.5s;
+    }
+
+    .miniBanner--box a:hover {
+    border-color: red;
+    }
+
+    .miniBanner-BG p:hover {
+        color: rgb(185, 9, 9);
+    }
+
+</style>
+
+<body>
+    <div class="miniBanner">
+        <div class="miniBanner--box">
+            <div class="miniBanner-BG">
+                <p>Sale</p>
+            </div>
+            <p class="title">Wakacyjne sukienki za 19.99zł<br>
+            <a href="#">KUP TERAZ</a></p>
+        </div>
+
+        <div class="miniBanner--box">
+            <div class="miniBanner-BG">
+                <p>Sale</p>
+            </div>
+            <p class="title">Wakacyjne sukienki za 19.99zł<br>
+            <a href="#">KUP TERAZ</a></p>
+        </div>
+
+        <div class="miniBanner--box">
+            <div class="miniBanner-BG">
+                <p>Sale</p>
+            </div>
+            <p class="title">Wakacyjne sukienki za 19.99zł<br>
+            <a href="#">KUP TERAZ</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

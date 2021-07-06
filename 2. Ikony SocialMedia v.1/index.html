@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+	@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+	.Eprom_SocialMedia_v1-container {
+		width: 400px;
+		margin: 40vh auto;
+		text-align: center;
+	}
+
+	.Eprom_SocialMedia_v1-icons {
+		padding: 0;
+		list-style: none;
+		margin: 1em;
+	}
+
+	.Eprom_SocialMedia_v1-icons li {
+		display: inline-block;
+		margin: 0.15em;
+		position: relative;
+		font-size: 1.2em;
+	}
+
+	.Eprom_SocialMedia_v1-icons i {
+		color: #fff;
+		position: absolute;
+		top: 21px;
+		left: 21px;
+		transition: all 265ms ease-out;
+	}
+
+	.Eprom_SocialMedia_v1-icons a {
+		display: inline-block;
+	}
+
+	.Eprom_SocialMedia_v1-icons a:before {
+		transform: scale(1);
+		-ms-transform: scale(1);
+		-webkit-transform: scale(1);
+		content: " ";
+		width: 60px;
+		height: 60px;
+		border-radius: 100%;
+		display: block;
+		background: linear-gradient(45deg, #c24e84, #ff0dcb);
+		transition: all 265ms ease-out;
+	}
+
+	.Eprom_SocialMedia_v1-icons a:hover:before {
+		transform: scale(0);
+		transition: all 265ms ease-in;
+	}
+
+	.Eprom_SocialMedia_v1-icons a:hover i {
+		transform: scale(2.2);
+		-ms-transform: scale(2.2);
+		-webkit-transform: scale(2.2);
+		color: #c24e84;
+		background: -webkit-linear-gradient(45deg, #c24e84, #ff0dcb);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		transition: all 265ms ease-in;
+	}
+</style>
+
+<body>
+	<div class="Eprom_SocialMedia_v1-container">
+		<ul class="Eprom_SocialMedia_v1-icons">
+			<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+			<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+			<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+			<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+		</ul>
+</body>
+
+</html>

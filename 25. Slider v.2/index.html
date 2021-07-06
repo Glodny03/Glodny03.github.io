@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .slider2Wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 450px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .slider2Wrapper img {
+        width: 100%;
+        position: absolute;
+        z-index: -100;
+    }
+
+    .slider2Wrapper img:nth-child(1) {
+  z-index: 1000;
+    }
+
+    .controlBtn {
+        position: absolute;
+        z-index: 10;
+        background: transparent;
+        color: white;
+        border: none;
+        font-size: 60px;
+        cursor: pointer;
+        font-family: 'Poppins';
+    }
+
+    .previous {
+        left: 40px;
+    }
+
+    .next {
+        right: 40px;
+    }
+
+    .slider2Wrapper img {
+        width: 100%;
+        position: absolute;
+        z-index: -100;
+    }
+
+    .slider2Wrapper img:nth-child(1) {
+  z-index: 1000;
+    }
+</style>
+
+<body>
+    <div class="slider2Wrapper">
+        <button class="previous controlBtn">
+            <</button> <button class="next controlBtn">>
+        </button>
+        <img src="https://images.pexels.com/photos/1187079/pexels-photo-1187079.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            alt="bg1">
+        <img src="https://images.pexels.com/photos/5591714/pexels-photo-5591714.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            alt="bg2">
+        <img src="https://images.pexels.com/photos/2879817/pexels-photo-2879817.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            alt="bg3">
+    </div>
+
+    <script>
+        let activeBG = 1;
+
+        const next = document.querySelector('.next');
+        const previous = document.querySelector('.previous');
+        const sliderIMG = document.querySelectorAll('.slider2Wrapper img');
+
+        sliderIMG.forEach(element => {
+            element.addEventListener('click', () => {
+                console.log('Sex ;)');
+            })
+        });
+
+        
+    </script>
+</body>
+
+</html>

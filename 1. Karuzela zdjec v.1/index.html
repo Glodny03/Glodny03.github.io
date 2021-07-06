@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. Karuzela - loga, zdjęcia</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        align-items: center;
+        background: #ffffff;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+    }
+
+    @keyframes carouselMovement {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(calc(-250px * 7));
+        }
+    }
+
+    .slide1r_Carousel_v1 {
+        background: white;
+        box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+        height: 100px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: 100vw;
+    }
+
+    .slide1r_Carousel_v1::before,
+    .slide1r_Carousel_v1::after {
+        background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+        content: "";
+        height: 100px;
+        position: absolute;
+        width: 200px;
+        z-index: 2;
+    }
+
+    .slide1r_Carousel_v1::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+    }
+
+    .slide1r_Carousel_v1::before {
+        left: 0;
+        top: 0;
+    }
+
+    .slide1r_Carousel_v1 .slide1-track {
+        animation: carouselMovement 40s linear infinite;
+        display: flex;
+        width: calc(250px * 14);
+    }
+
+    .slide1r_Carousel_v1 .slide1 {
+        height: 100px;
+        width: 250px;
+    }
+</style>
+
+<body>
+    <div class="slide1r_Carousel_v1">
+        <div class="slide1-track">
+            <div class="slide1">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+            </div>
+            <div class="slide1">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+            </div>
+            <div class="slide1">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+            </div>
+            <div class="slide1">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+            </div>
+            <div class="slide1">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+            </div>
+            <div class="slide1">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+            </div>
+            <div class="slide1">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+            </div>
+            <div class="slide1">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+            </div>
+            <div class="slide1">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+            </div>
+            <div class="slide1">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+            </div>
+            <div class="slide1">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+            </div>
+            <div class="slide1">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

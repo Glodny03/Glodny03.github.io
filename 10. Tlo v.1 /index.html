@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('./kicia.jpg');
+    background-size: cover;
+}
+
+.banner .content {
+    max-width: 900px;
+    text-align: center;
+
+}
+
+.banner .content h2 {
+    font-size: 5em;
+    color: #fff;
+    font-family: 'Poppins';
+
+}
+
+.banner .content p {
+    font-size: 14px;
+    color: #fff;
+    font-family: 'Poppins';
+}
+
+.btn {
+    font-size: 1em;
+    color: #fff;
+    background: #9019ff;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    font-family: 'Poppins';
+}
+
+.btn:hover {
+    letter-spacing: 6px;
+}
+@media (max-width:991px) {
+    .banner .content h2 {
+        font-size: 3em;
+        color: #fff;
+    }
+
+}
+
+@media(max-width:480px) {
+    .banner.content h2 {
+        font-size: 2.2em;
+        color: #fff;
+    }
+}
+</style>
+<body>
+    <div class="banner" id="banner">
+        <div class="content">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Distinctio dolorum odio fuga autem eius
+                asperiores reiciendis, pariatur molestiae, nobis officiis delectus, illum commodi natus debitis
+                consequuntur nam. Soluta, cupiditate ducimus.</p>
+            <a href="#" class="btn">Zobacz</a>
+        </div>
+    </div>
+</body>
+</html>

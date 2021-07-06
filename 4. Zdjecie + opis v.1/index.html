@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ourArtists {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 70px;
+    }
+
+    .ourArtists img {
+        width: 23vw;
+        margin: 0px 30px;
+        border-radius: 30px;
+    }
+
+    .ourArtists__contentContainer {
+        display: flex;
+        flex-direction: column;
+        max-width: 630px;
+    }
+
+    .ourArtists__contentContainer h2,
+    .creativeProcess--title{
+        color: #000000;
+        font-family: 'Poppins';
+        font-weight: 800;
+        font-size: 19px;
+    }
+
+    .ourArtists__contentContainer h1 {
+        color: black;
+        font-family: 'Poppins', serif;
+        font-weight: 800;
+        font-size: 35px;
+        letter-spacing: 0.8px;
+    }
+
+    .ourArtists__contentContainer p {
+        font-family: 'Poppins';
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    @media(max-width: 610px) {
+     
+
+        .ourArtists img {
+            width: 90vw;
+        }
+
+        .ourArtists__contentContainer {
+            max-width: 90vw;
+            text-align: center;
+        }
+    }
+</style>
+<body>
+    <div class="ourArtists">
+        <img src="./cat.jpg" alt="Woodman">
+        <div class="ourArtists__contentContainer">
+            <h2>Lorem ipsum</h2><br>
+            <h1>Tytuł</h1><br>
+            <p><strong>Lorem ipsum dolor sit amet.</strong></p> <br>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quod sint ipsam, aspernatur dolorum cumque repellat similique minus, ullam veniam, inventore qui facere. Omnis ratione sint ducimus magnam a rerum.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga incidunt, quisquam vero, placeat eius ipsum animi facilis reprehenderit ipsam beatae excepturi ducimus aliquam, culpa sequi dolorem quod quidem corrupti sint.
+           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore, iusto quos voluptas laboriosam dolor consequuntur laborum illum minima exercitationem, nesciunt similique distinctio sit voluptates consectetur. Ea mollitia corrupti expedita voluptate.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
