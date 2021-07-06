@@ -8,30 +8,25 @@
   <title>Slider project ;)</title>
 </head>
 <style>
-  @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
   * {
     box-sizing: border-box;
-  }
-
-  body {
-    font-family: 'Muli', sans-serif;
-    overflow: hidden;
     margin: 0;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 30%, rgba(180, 22, 24, 1) 97%, rgba(142, 27, 27, 1) 100%, rgba(0, 212, 255, 1) 100%);
-    height: 100vh;
+    padding: 0;
+
+  }
+  .container25 {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .container {
+    font-family: 'Poppins', sans-serif;
     width: 100%;
     display: flex;
     padding: 0 20px;
   }
 
-  .slide {
+  .slide25 {
     height: 80vh;
     border-radius: 20px;
     margin: 10px;
@@ -45,7 +40,7 @@
     transition: all 500ms ease-in-out;
   }
 
-  .slide h3 {
+  .slide25 h3 {
     position: absolute;
     font-size: 24px;
     bottom: 20px;
@@ -54,46 +49,49 @@
     opacity: 0;
   }
 
-  .slide.active {
+  .slide25.active {
     flex: 10;
   }
 
-  .slide.active h3 {
+  .slide25.active h3 {
     opacity: 1;
     transition: opacity 0.3s ease-out 0.4s;
   }
 </style>
 
 <body>
-  <div class="container">
-    <div class="slide" style="
-          background-image: url('https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');
+  <div class="container25">
+    <div class="slide25" style="
+          background-image: url('https://images.pexels.com/photos/1086178/pexels-photo-1086178.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
         ">
-      <h3>Pizza</h3>
+      <h3>Lorem ipsum</h3>
+      <button class="btn25">
+
+      </button>
     </div>
-    <div class="slide" style="
-          background-image: url('https://images.unsplash.com/photo-1582106245687-cbb466a9f07f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+    <div class="slide25" style="
+          background-image: url('https://images.pexels.com/photos/1447367/pexels-photo-1447367.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
         ">
-      <h3>Drinks</h3>
+      <h3>Lorem ipsum</h3>
     </div>
-    <div class="slide" style="
-          background-image: url('https://images.unsplash.com/photo-1611171711925-92171c63fc4b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');
+    <div class="slide25" style="
+          background-image: url('https://images.pexels.com/photos/1005711/pexels-photo-1005711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
         ">
-      <h3>Salads</h3>
+      <h3>Lorem ipsum</h3>
     </div>
-    <div class="slide" style="
-          background-image: url('https://images.unsplash.com/photo-1550547660-d9450f859349?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=701&q=80');
+    <div class="slide25" style="
+          background-image: url('https://images.pexels.com/photos/2132227/pexels-photo-2132227.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
         ">
-      <h3>Burgers</h3>
+      <h3>Lorem ipsum</h3>
     </div>
-    <div class="slide" style="
-          background-image: url('https://images.unsplash.com/photo-1488900128323-21503983a07e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');
+    <div class="slide25" style="
+          background-image: url('https://images.pexels.com/photos/1030875/pexels-photo-1030875.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
         ">
-      <h3>Dessert</h3>
+      <h3>Lorem ipsum</h3>
     </div>
   </div>
   <script>
-    const slides = document.querySelectorAll('.slide')
+    const slides = document.querySelectorAll('.slide25')
 
     function clearActiveClass() {
       slides.forEach((slide) => {
