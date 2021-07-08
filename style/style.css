@@ -13,36 +13,54 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 70px 30px 0 30px
+    padding: 70px 30px 0 30px;
+    overflow-x: hidden;
 }
 
 .typewriterTEXT {
     white-space: nowrap;
-    overflow: hidden;    
-    font-family: 'Source Code Pro', monospace;  
+    overflow: hidden;
+    font-family: 'Source Code Pro', monospace;
     font-size: 28px;
     color: rgba(0, 0, 0, 0.7);
-  }
-  
-  /* Animation */
-  .typewriterTEXT {
-    animation: animated-text 4s steps(29,end) 1s 1 normal both,
-               animated-cursor 600ms steps(29,end) infinite;
-  }
-  
-  /* text animation */
-  
-  @keyframes animated-text{
-    from{width: 0;}
-    to{width: 472px;}
-  }
-  
-  /* cursor animations */
-  
-  @keyframes animated-cursor{
-    from{border-right-color: rgba(0,255,0,.75);}
-    to{border-right-color: transparent;}
-  }
+}
+
+.typewriterTEXTNO {
+    font-family: 'Source Code Pro', monospace;
+    margin-top: 30px;
+    display: none;
+    font-size: 50px;
+}
+
+/* Animation */
+.typewriterTEXT {
+    animation: animated-text 4s steps(29, end) 1s 1 normal both,
+        animated-cursor 600ms steps(29, end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 472px;
+    }
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor {
+    from {
+        border-right-color: rgba(0, 255, 0, .75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
 
 .contentWrapper {
     display: flex;
@@ -51,12 +69,12 @@ body {
 }
 
 .textBox {
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: stretch;
-   width: 70vw;
-  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    width: 70vw;
+
 }
 
 .contentBox {
@@ -84,12 +102,15 @@ body {
 
 /* -  */
 @keyframes blink {
-    from, to {
+
+    from,
+    to {
         color: transparent;
-   }
+    }
+
     50% {
         color: black;
-   }
+    }
 }
 
 #container {
@@ -98,14 +119,17 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 #teletype {
     font-family: 'Uchen';
     font-size: 14px;
     display: block;
 }
+
 #teletype span {
     animation: blink 1s step-end infinite;
 }
+
 form {
     background: #333;
     padding: 1rem;
@@ -113,16 +137,19 @@ form {
     font-size: 1.2rem;
     transition: 1s;
 }
+
 #typer {
     padding: 0.4rem;
     font-size: inherit;
     width: 36rem;
 }
+
 input[type="submit"] {
     font-size: inherit;
     display: inline-block;
     padding: 0.3rem;
 }
+
 .hideaway {
     transform: translateY(5vw);
 }
@@ -299,11 +326,12 @@ nav {
     font-family: Oswald, sans-serif;
     font-weight: 300;
     color: #000;
-    text-decoration: none
+    text-decoration: none;
+    line-height: 30px;
 }
 
 nav ul {
-    list-style-type: none
+    list-style-type: none;
 }
 
 nav ul li a {
@@ -315,7 +343,8 @@ nav ul li a {
     font-size: 17px;
     letter-spacing: 3px;
     transition: .8s;
-    margin-left: 75px
+    margin-left: 75px;
+    margin-top: 10px;
 }
 
 .bold {
@@ -519,7 +548,32 @@ textarea {
     }
 
     .textBox {
-        width: 95vw; 
-        background-color: red;
+        width: 95vw;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .contentBox {
+        margin-left: 0px;
+    }
+
+    .contentBox p {
+        font-size: 19px;
+    }
+
+    .TextMobileOFF {
+        display: none;
+    }
+
+    .typewriterTEXT {
+        display: none;
+    }
+
+    .typewriterTEXTNO {
+        display: block;
     }
 }
