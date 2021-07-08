@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .slider26 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 100vw;
+        height: 500px;
+        background-color: rgb(230, 46, 214);
+        font-family: 'Poppins';
+        color: white;
+        transition: .4s;
+    }
+
+    .slider26Btn {
+        width: 100px;
+        height: 50px;
+        border: none;
+        color: black;
+        font-family: 'Poppins';
+        background-color: rgb(255, 255, 255);
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        transition: 0.6s;
+        text-align: center;
+        margin: 15px;
+        cursor: pointer;
+    }
+
+    .slider26Btn:hover {
+        background-color: rgb(20, 17, 17);
+        color: white;
+    }
+
+    .slider26ContentBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 40vw;
+        text-align: center;
+    }
+
+    .slider26ContentBox h1 {
+        font-weight: 500;
+        letter-spacing: 2px;
+        cursor: default;
+    }
+
+    .slider26ContentBox p {
+        font-weight: 300;
+        cursor: default;
+
+    }
+
+    .slider26ImageBox {
+        width: 650px;
+        height: 450px;
+        margin-top: 50px;
+        background-image: url('https://images.pexels.com/photos/2710131/pexels-photo-2710131.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+        background-position: center;
+        background-size: 700px;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: space-between;
+        transition: 0.4s;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    }
+
+    .slider26BTN {
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 40px;
+        font-family: 'Poppins', sans-serif;
+        margin: 0 10px;
+        transition: 0.4s;
+        cursor: pointer;
+    }
+
+    .slider26BTN:hover {
+        color: black;
+    }
+</style>
+
+<body>
+    <div class="slider26">
+        <div class="slider26ContentBox">
+            <p class="blackC">Co Cię interesuję?</p>
+            <div class="slider26__buttons"> <button class="slider26Btn">One</button> <button
+                    class="slider26Btn">Two</button> <button class="slider26Btn">Three</button> </div>
+            <h1>Lorem ipsum dolor</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, quisquam! Minus suscipit cupiditate, ab
+                veritatis repudiandae aliquid praesentium ipsum doloribus nisi voluptate natus veniam sint optio
+                eveniet, delectus quibusdam accusamus nulla saepe voluptas aspernatur. Nostrum?</p>
+        </div>
+        <div class="slider26ImageBox">
+            <button class="slider26BTN">
+                <</button> <button class="slider26BTN">>
+            </button>
+        </div>
+    </div>
+    <script>
+        const btnPrevious = document.querySelector('.slider26BTN:nth-child(1)');
+        const btnNext = document.querySelector('.slider26BTN:nth-child(2)');
+        const slider26 = document.querySelector('.slider26ImageBox');
+        const sliderToChangeBG = document.querySelector('.slider26');
+
+        const imageList = [
+            'https://images.pexels.com/photos/2710131/pexels-photo-2710131.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+            'https://images.pexels.com/photos/2709386/pexels-photo-2709386.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+            'https://images.pexels.com/photos/3680316/pexels-photo-3680316.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+        ];
+
+        let actualSlide = 0;
+
+        btnPrevious.style.color = 'rgb(180, 175, 175)';
+
+        const checkSlide = () => {
+            if (actualSlide == 0) {
+                slider26.style.backgroundImage = `url(${imageList[0]})`;
+                btnPrevious.style.color = 'rgb(180, 175, 175)';
+                sliderToChangeBG.style.backgroundColor = 'rgb(230, 46, 214)';
+            } else if (actualSlide == 1) {
+                slider26.style.backgroundImage = `url(${imageList[1]})`;
+                btnPrevious.style.color = 'white';
+                btnNext.style.color = 'white';
+                sliderToChangeBG.style.backgroundColor = 'rgb(230, 202, 46)';
+                
+            } else if (actualSlide == 2) {
+                slider26.style.backgroundImage = `url(${imageList[2]})`;
+                btnNext.style.color = 'rgb(180, 175, 175)';
+                sliderToChangeBG.style.backgroundColor = 'rgb(46, 230, 221)';
+            }
+
+
+        }
+
+        btnPrevious.addEventListener('click', () => {
+            if (actualSlide == 0) return;
+            actualSlide--;
+            checkSlide();
+        });
+
+        btnNext.addEventListener('click', () => {
+            if (actualSlide == 3) return;
+            actualSlide++;
+            checkSlide();
+        });
+
+      
+    </script>
+</body>
+
+</html>

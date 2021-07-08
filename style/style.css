@@ -1,0 +1,517 @@
+@import url(https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Uchen&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    background-image: url(../assets/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 70px 30px 0 30px
+}
+
+.typewriterTEXT {
+    white-space: nowrap;
+    overflow: hidden;    
+    font-family: 'Source Code Pro', monospace;  
+    font-size: 28px;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Animation */
+  .typewriterTEXT {
+    animation: animated-text 4s steps(29,end) 1s 1 normal both,
+               animated-cursor 600ms steps(29,end) infinite;
+  }
+  
+  /* text animation */
+  
+  @keyframes animated-text{
+    from{width: 0;}
+    to{width: 472px;}
+  }
+  
+  /* cursor animations */
+  
+  @keyframes animated-cursor{
+    from{border-right-color: rgba(0,255,0,.75);}
+    to{border-right-color: transparent;}
+  }
+
+.contentWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.textBox {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: stretch;
+   width: 70vw;
+  
+}
+
+.contentBox {
+    width: 30vw;
+}
+.contentBox h1 {
+    font-family: 'Oswald';
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.contentBox p {
+    font-family: 'Uchen';
+    font-size: 14px;
+}
+
+/* -  */
+@keyframes blink {
+    from, to {
+        color: transparent;
+   }
+    50% {
+        color: black;
+   }
+}
+
+#container {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#teletype {
+    font-family: 'Uchen';
+    font-size: 14px;
+    display: block;
+}
+#teletype span {
+    animation: blink 1s step-end infinite;
+}
+form {
+    background: #333;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    transition: 1s;
+}
+#typer {
+    padding: 0.4rem;
+    font-size: inherit;
+    width: 36rem;
+}
+input[type="submit"] {
+    font-size: inherit;
+    display: inline-block;
+    padding: 0.3rem;
+}
+.hideaway {
+    transform: translateY(5vw);
+}
+
+/* -  */
+
+
+.icon-1,
+.icon-2,
+.icon-3 {
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    width: 32px;
+    height: 3px;
+    background-color: #000;
+    transition: all .4s cubic-bezier(.84, .06, .52, 1.8)
+}
+
+.icon-1 {
+    transform: translateY(-8px);
+    animation-delay: .1s;
+    background-color: #000
+}
+
+.icon-3 {
+    transform: translateY(8px);
+    animation-delay: 250ms
+}
+
+.hamburger-icon {
+    position: fixed;
+    height: 60px;
+    width: 60px;
+    top: 10%;
+    left: 3%;
+    z-index: 1000;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all .2s ease-in-out;
+    background: rgba(255, 255, 255, .2);
+    display: none
+}
+
+.hamburger-icon:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .1)
+}
+
+.icon-1.a {
+    transform: rotate(40deg);
+    background-color: #fff
+}
+
+.icon-3.b {
+    transform: rotate(-40deg);
+    background-color: #fff
+}
+
+.icon-2.c {
+    opacity: 0
+}
+
+.clear {
+    clear: both
+}
+
+@keyframes slideIn {
+    0% {
+        width: 0%;
+        opacity: 0
+    }
+
+    100% {
+        width: 50%;
+        opacity: 1
+    }
+}
+
+.hamburgerNAV {
+    background: #4a4a4a;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 0%;
+    z-index: 10;
+    opacity: 0;
+    transition: all .6s cubic-bezier(.62, .04, .3, 1.56);
+    transition-delay: .1s;
+    display: none;
+    justify-content: center;
+    align-items: center
+}
+
+.hamburgerNAV ul {
+    margin: 0
+}
+
+.hamburgerNAV ul li {
+    list-style: none;
+    font-size: 24px;
+    color: #fff;
+    line-height: 2.2;
+    text-transform: uppercase;
+    letter-spacing: 1.7px
+}
+
+
+.hamburgerNAV ul li a:hover {
+    color: #f0ecde;
+}
+
+nav.show {
+    width: 50%;
+    opacity: 1
+}
+
+.dark-blue {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #22211a;
+    height: 100%;
+    width: 0%;
+    transition: all .5s cubic-bezier(.62, .04, .3, 1.8);
+    transition-delay: 50ms;
+    z-index: 5;
+    opacity: 1
+}
+
+.dark-blue.slide {
+    width: 50%;
+    opacity: 1
+}
+
+@keyframes shotup {
+    0% {
+        transform: translateY(300%);
+        opacity: 0
+    }
+
+    90% {
+        transform: translateY(-50px)
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center
+}
+
+.content h1 {
+    font-size: 70px;
+    animation: shotup .6s ease-in-out;
+    animation-delay: .3s
+}
+
+.logo {
+    margin-bottom: 15px
+}
+
+nav {
+    font-family: Oswald, sans-serif;
+    font-weight: 300;
+    color: #000;
+    text-decoration: none
+}
+
+nav ul {
+    list-style-type: none
+}
+
+nav ul li a {
+    font-family: Oswald, sans-serif;
+    font-weight: 200;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 17px;
+    letter-spacing: 3px;
+    transition: .8s;
+    margin-left: 75px
+}
+
+.bold {
+    font-weight: 400;
+    font-size: 19px;
+    margin-left: 40px
+}
+
+.colorBar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 50px;
+    background-color: #f0ecde
+}
+
+.footer {
+    width: 100vw;
+    padding: 30px 0 30px 0;
+    background-color: #f0ecde;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    left: 0;
+    bottom: 0;
+    margin-left: -30px
+}
+
+.footer p {
+    font-family: Uchen;
+    letter-spacing: 1.5px;
+    font-weight: lighter
+}
+
+textarea {
+    resize: none
+}
+
+.text {
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    white-space: nowrap
+}
+
+.svg-inline--fa {
+    vertical-align: -.2em
+}
+
+.rounded-social-buttons {
+    text-align: center;
+    display: flex;
+    flex-direction: row
+}
+
+.rounded-social-buttons .social-button {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 3.125rem;
+    height: 3.125rem;
+    border: .125rem solid transparent;
+    padding: 0;
+    text-decoration: none;
+    text-align: center;
+    color: #fefefe;
+    font-size: 1.5625rem;
+    font-weight: 400;
+    border-radius: 1.6875rem;
+    transition: all .5s ease;
+    margin-right: .25rem;
+    margin-bottom: .25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8px;
+    margin-right: 8px
+}
+
+.rounded-social-buttons .social-button:focus,
+.rounded-social-buttons .social-button:hover {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg)
+}
+
+.fa-facebook-f,
+.fa-instagram,
+.fa-linkedin,
+.fa-youtube,
+.rounded-social-buttons .fa-twitter {
+    font-size: 25px
+}
+
+.rounded-social-buttons .social-button.facebook {
+    background: #ad8d557e
+}
+
+.rounded-social-buttons .social-button.facebook:focus,
+.rounded-social-buttons .social-button.facebook:hover {
+    color: #3b5998;
+    background: #f0ecde;
+    border-color: #3b5998
+}
+
+.rounded-social-buttons .social-button.twitter {
+    background: #ad8d557e
+}
+
+.rounded-social-buttons .social-button.twitter:focus,
+.rounded-social-buttons .social-button.twitter:hover {
+    color: #55acee;
+    background: #f0ecde;
+    border-color: #55acee
+}
+
+.rounded-social-buttons .social-button.linkedin {
+    background: #ad8d557e
+}
+
+.rounded-social-buttons .social-button.linkedin:focus,
+.rounded-social-buttons .social-button.linkedin:hover {
+    color: #007bb5;
+    background: #f0ecde;
+    border-color: #007bb5
+}
+
+.rounded-social-buttons .social-button.instagram {
+    background: #ad8d557e
+}
+
+.rounded-social-buttons .social-button.instagram:focus,
+.rounded-social-buttons .social-button.instagram:hover {
+    color: #125688;
+    background: #f0ecde;
+    border-color: #125688
+}
+
+
+
+@media (max-width:650px) {
+    .menu nav {
+        display: none
+    }
+
+    .menu .logo {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%)
+    }
+
+    .hamburger-icon,
+    .hamburgerNAV {
+        display: flex
+    }
+
+    .hamburgerNAV {
+        padding-right: 50px
+    }
+
+    nav ul li {
+        margin: 10px 0
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        letter-spacing: 1.5px;
+        color: #fff;
+        font-family: Oswald
+    }
+
+    .bold {
+        font-size: 23px
+    }
+
+    .hamburgerNAV ul li {
+        text-align: right;
+        line-height: 25px
+    }
+
+    .footer {
+        flex-direction: column
+    }
+
+    .footer p {
+        margin: 15px 0;
+        font-size: 18px;
+        text-align: center
+    }
+
+    .contentWrapper {
+        justify-content: center;
+    }
+
+    .textBox {
+        width: 95vw; 
+        background-color: red;
+    }
+}
