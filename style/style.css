@@ -53,15 +53,22 @@ body {
 .textBox {
    display: flex;
    flex-direction: row;
-   justify-content: space-around;
+   justify-content: center;
    align-items: stretch;
    width: 70vw;
   
 }
 
 .contentBox {
-    width: 30vw;
+    margin-left: 70px;
+    max-width: 350px;
 }
+
+.textBox img {
+    max-width: 400px;
+    max-height: 520px;
+}
+
 .contentBox h1 {
     font-family: 'Oswald';
     font-weight: 500;
@@ -337,7 +344,8 @@ nav ul li a {
     align-items: center;
     left: 0;
     bottom: 0;
-    margin-left: -30px
+    margin-left: -30px;
+    margin-top: 100px;
 }
 
 .footer p {
