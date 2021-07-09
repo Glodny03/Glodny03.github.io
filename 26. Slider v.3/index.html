@@ -8,12 +8,12 @@
     <title>Document</title>
 </head>
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap);
 
     * {
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
+        box-sizing: border-box
     }
 
     .slider26 {
@@ -23,31 +23,31 @@
         align-items: center;
         width: 100vw;
         height: 500px;
-        background-color: rgb(230, 46, 214);
-        font-family: 'Poppins';
-        color: white;
-        transition: .4s;
+        background-color: #e62ed6;
+        font-family: Poppins;
+        color: #fff;
+        transition: .4s
     }
 
     .slider26Btn {
         width: 100px;
         height: 50px;
         border: none;
-        color: black;
-        font-family: 'Poppins';
-        background-color: rgb(255, 255, 255);
+        color: #000;
+        font-family: Poppins;
+        background-color: #fff;
         font-size: 20px;
         font-weight: 600;
         letter-spacing: 2px;
-        transition: 0.6s;
+        transition: .6s;
         text-align: center;
         margin: 15px;
-        cursor: pointer;
+        cursor: pointer
     }
 
     .slider26Btn:hover {
-        background-color: rgb(20, 17, 17);
-        color: white;
+        background-color: #141111;
+        color: #fff
     }
 
     .slider26ContentBox {
@@ -56,51 +56,69 @@
         justify-content: center;
         align-items: center;
         max-width: 40vw;
-        text-align: center;
+        text-align: center
     }
 
     .slider26ContentBox h1 {
         font-weight: 500;
         letter-spacing: 2px;
-        cursor: default;
+        cursor: default
     }
 
     .slider26ContentBox p {
         font-weight: 300;
-        cursor: default;
-
+        cursor: default
     }
 
     .slider26ImageBox {
         width: 650px;
         height: 450px;
         margin-top: 50px;
-        background-image: url('https://images.pexels.com/photos/2710131/pexels-photo-2710131.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+        background-image: url(https://images.pexels.com/photos/2710131/pexels-photo-2710131.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
         background-position: center;
         background-size: 700px;
         background-repeat: no-repeat;
         display: flex;
         justify-content: space-between;
-        transition: 0.4s;
+        transition: .4s;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-
+        box-shadow: rgba(100, 100, 111, .2) 0 7px 29px 0
     }
 
     .slider26BTN {
         background-color: transparent;
         border: none;
-        color: white;
+        color: #fff;
         font-size: 40px;
-        font-family: 'Poppins', sans-serif;
+        font-family: Poppins, sans-serif;
         margin: 0 10px;
-        transition: 0.4s;
-        cursor: pointer;
+        transition: .4s;
+        cursor: pointer
     }
 
     .slider26BTN:hover {
-        color: black;
+        color: #000
+    }
+
+    .blackC {
+        margin-top: 20px
+    }
+
+    @media (max-width:650px) {
+        .slider26ContentBox {
+            max-width: 90vw
+        }
+
+        .slider26 {
+            height: auto
+        }
+
+        .slider26ImageBox {
+            width: 95vw;
+            height: 100vw;
+            background-size: 95vw
+        }
     }
 </style>
 
@@ -139,15 +157,19 @@
 
         const checkSlide = () => {
             if (actualSlide == 0) {
+
                 slider26.style.backgroundImage = `url(${imageList[0]})`;
                 btnPrevious.style.color = 'rgb(180, 175, 175)';
                 sliderToChangeBG.style.backgroundColor = 'rgb(230, 46, 214)';
+
             } else if (actualSlide == 1) {
+
                 slider26.style.backgroundImage = `url(${imageList[1]})`;
                 btnPrevious.style.color = 'white';
                 btnNext.style.color = 'white';
                 sliderToChangeBG.style.backgroundColor = 'rgb(230, 202, 46)';
-                
+
+
             } else if (actualSlide == 2) {
                 slider26.style.backgroundImage = `url(${imageList[2]})`;
                 btnNext.style.color = 'rgb(180, 175, 175)';
@@ -168,8 +190,6 @@
             actualSlide++;
             checkSlide();
         });
-
-      
     </script>
 </body>
 
