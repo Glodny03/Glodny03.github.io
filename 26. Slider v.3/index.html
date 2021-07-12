@@ -47,12 +47,11 @@
         text-align: center;
         margin: 15px;
         cursor: pointer;
-        outline: none !important;
+        outline: none;
     }
 
     .slider26Btn:focused {
-        outline: none !important;
-        background-color: transparent !important;
+        outline: none;
     }
 
     .slider26Btn:hover {
@@ -93,7 +92,7 @@
         transition: .4s;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
-        box-shadow: rgba(100, 100, 111, .2) 0 7px 29px 0
+        box-shadow: rgba(100, 100, 111, .2) 0 7px 29px 0;
     }
 
     .slider26BTN {
@@ -127,7 +126,7 @@
         .slider26ImageBox {
             width: 95vw;
             height: 100vw;
-            background-size: 95vw
+            background-size: 95vw;
         }
     }
 </style>
@@ -138,8 +137,9 @@
             <p class="blackC">Co Cię interesuję?</p>
             <div class="slider26__buttons"> <button class="slider26Btn">One</button> <button
                     class="slider26Btn">Two</button> <button class="slider26Btn">Three</button> </div>
-            <h1>Lorem ipsum dolor</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, quisquam! Minus suscipit cupiditate, ab
+            <h1 class='title26'>Lorem ipsum dolor</h1>
+            <p class="desc26">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, quisquam! Minus suscipit
+                cupiditate, ab
                 veritatis repudiandae aliquid praesentium ipsum doloribus nisi voluptate natus veniam sint optio
                 eveniet, delectus quibusdam accusamus nulla saepe voluptas aspernatur. Nostrum?</p>
         </div>
@@ -150,56 +150,51 @@
         </div>
     </div>
     <script>
-        const btnPrevious = document.querySelector('.slider26BTN:nth-child(1)');
-        const btnNext = document.querySelector('.slider26BTN:nth-child(2)');
-        const slider26 = document.querySelector('.slider26ImageBox');
-        const sliderToChangeBG = document.querySelector('.slider26');
+        const btnPrevious = document.querySelector(".slider26BTN:nth-child(1)"),
+            btnNext = document.querySelector(".slider26BTN:nth-child(2)"),
+            slider26 = document.querySelector(".slider26ImageBox"),
+            sliderToChangeBG = document.querySelector(".slider26"),
+            title26 = document.querySelector(".title26"),
+            desc26 = document.querySelector(".desc26"),
 
-        const imageList = [
-            'https://images.pexels.com/photos/2710131/pexels-photo-2710131.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-            'https://images.pexels.com/photos/2709386/pexels-photo-2709386.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-            'https://images.pexels.com/photos/3680316/pexels-photo-3680316.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
-        ];
+            titleList = ["Lorem ipsum dolor", "Nisi voluptate natus", "Delectus quibusdam"],
+            descList = [
+                "1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, quisquam! Minus suscipit cupiditate, abveritatis repudiandae aliquid praesentium ipsum doloribus nisi voluptate natus veniam sint optio eveniet, delectus quibusdam accusamus nulla saepe voluptas aspernatur. Nostrum?",
+                "2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, quisquam! Minus suscipit cupiditate, abveritatis repudiandae aliquid praesentium ipsum doloribus nisi voluptate natus veniam sint optio eveniet, delectus quibusdam accusamus nulla saepe voluptas aspernatur. Nostrum?",
+                "3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, quisquam! Minus suscipit cupiditate, abveritatis repudiandae aliquid praesentium ipsum doloribus nisi voluptate natus veniam sint optio eveniet, delectus quibusdam accusamus nulla saepe voluptas aspernatur. Nostrum?"
+            ],
+            imagePath = [
+                "https://images.pexels.com/photos/2710131/pexels-photo-2710131.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                "https://images.pexels.com/photos/2709386/pexels-photo-2709386.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                "https://images.pexels.com/photos/3680316/pexels-photo-3680316.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            ];
 
         let actualSlide = 0;
 
-        btnPrevious.style.color = 'rgb(180, 175, 175)';
+        const offBtnColor = "rgb(180, 175, 175)",
+            changeRecurringValues = (index, bgColor) => {
+                slider26.style.backgroundImage = `url(${imagePath[index]})`, sliderToChangeBG.style.backgroundColor =
+                    bgColor,
+                    title26.textContent = titleList[index], desc26.textContent = descList[index]
+            },
 
-        const checkSlide = () => {
-            if (actualSlide == 0) {
+            checkSlide = () => {
+                    0 == actualSlide ?
+                    (btnPrevious.style.color = offBtnColor,
+                        changeRecurringValues(0, "#e62ed6")) :
+                    1 == actualSlide ?
+                    (changeRecurringValues(1, "rgb(205, 202, 0)"),
+                        btnPrevious.style.color = "white", btnNext.style.color = "white") :
+                    2 == actualSlide && (changeRecurringValues(2, "rgb(66, 255, 239)"),
+                        btnNext.style.color = offBtnColor)
+            };
 
-                slider26.style.backgroundImage = `url(${imageList[0]})`;
-                btnPrevious.style.color = 'rgb(180, 175, 175)';
-                sliderToChangeBG.style.backgroundColor = 'rgb(230, 46, 214)';
-
-            } else if (actualSlide == 1) {
-
-                slider26.style.backgroundImage = `url(${imageList[1]})`;
-                btnPrevious.style.color = 'white';
-                btnNext.style.color = 'white';
-                sliderToChangeBG.style.backgroundColor = 'rgb(230, 202, 46)';
-
-
-            } else if (actualSlide == 2) {
-                slider26.style.backgroundImage = `url(${imageList[2]})`;
-                btnNext.style.color = 'rgb(180, 175, 175)';
-                sliderToChangeBG.style.backgroundColor = 'rgb(46, 230, 221)';
-            }
-
-
-        }
-
-        btnPrevious.addEventListener('click', () => {
-            if (actualSlide == 0) return;
-            actualSlide--;
-            checkSlide();
-        });
-
-        btnNext.addEventListener('click', () => {
-            if (actualSlide == 3) return;
-            actualSlide++;
-            checkSlide();
-        });
+        btnPrevious.addEventListener("click", () => {
+                0 != actualSlide && (actualSlide--, checkSlide())
+            }),
+            btnNext.addEventListener("click", () => {
+                3 != actualSlide && (actualSlide++, checkSlide())
+            });
     </script>
 </body>
 

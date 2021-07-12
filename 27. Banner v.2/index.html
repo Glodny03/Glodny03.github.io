@@ -8,12 +8,279 @@
     <title>Document</title>
 </head>
 <style>
+    @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap);
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        padding: 25px;
+    }
+
+    .banner2Container {
+        width: 950px;
+        overflow: hidden;
+        background-color: #f3a092;
+        border-radius: 40px;
+        height: 650px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .leftSide,
+    .rightSide {
+        width: 50%;
+        height: 100%;
+    }
+
+    .leftSide {
+        background-color: #49305a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .leftSide p {
+        z-index: 1000;
+    }
+
+    .leftSide button {
+        border: none;
+        color: #f3a092;
+        font-family: 'Poppins', sans-serif;
+        border-radius: 20px;
+        padding: 10px 20px;
+        letter-spacing: 2px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: 0.7s;
+        margin: 15px;
+        position: absolute;
+        background-color: transparent;
+        border-bottom: 3px solid #f3a092;
+        border-top: 20px solid #49305a;
+    }
+
+    .leftSide button:nth-child(1) {
+        top: 30px;
+        left: 30px;
+    }
+
+    .leftSide button:nth-child(2) {
+        bottom: 30px;
+        right: 30px;
+    }
+
+
+    .leftSide button:hover {
+        border-top: 0px solid #49305a;
+        background-color: #f3a092;
+        color: #f3a092;
+        color: #49305a;
+    }
+
+    .rightSide {
+        background-image: url('https://images.pexels.com/photos/4974360/pexels-photo-4974360.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+    .rightSide {
+        color: #49305a;
+        text-shadow: 2px -1px 10px #ffdfda;
+    }
+
+
+
+    .animated-text {
+        font: 3em/1.5 "Poppins";
+
+    }
+
+    .animated-text span.letter {
+        display: inline-block;
+    }
+
+    .animated-text.wave span.letter {
+        animation: 1s wave backwards ease-in-out infinite;
+    }
+
+    .animated-text.flip span.letter {
+        animation: 1s flip forwards ease-in-out infinite;
+    }
+
+    .animated-text.pop span.letter {
+        animation: 1s pop forwards ease-in-out infinite;
+    }
+
+    .animated-text.tilted span.letter {
+        animation: 1s tilted forwards ease-in-out infinite;
+    }
+
+    @keyframes wave {
+        0% {
+            transform: translateY(0em);
+        }
+
+        50% {
+            transform: translateY(-1rem);
+        }
+    }
+
+    @keyframes flip {
+        0% {
+            transform: rotateX(0deg);
+        }
+
+        50% {
+            transform: rotateX(90deg);
+        }
+
+        100% {
+            transform: rotateX(0deg);
+        }
+    }
+
+    @keyframes pop {
+        0% {
+            transform: rotateZ(5deg) scale(0.75) translateY(0);
+            opacity: 0.1;
+        }
+
+        50% {
+            transform: rotateZ(-5deg) scale(1) translateY(-0.5em);
+            opacity: 1;
+        }
+
+        100% {
+            transform: rotateZ(5deg) scale(0.75) translateY(0);
+            opacity: 0.1;
+        }
+    }
+
+    @keyframes tilted {
+        0% {
+            transform: rotateZ(-15deg);
+        }
+
+        50% {
+            transform: rotateZ(15deg);
+        }
+
+        100% {
+            transform: rotateZ(-15deg);
+        }
+    }
+
+    @keyframes shine {
+        75% {
+            color: inherit;
+        }
+
+        100% {
+            color: #fff;
+        }
+    }
+
+    @keyframes crazy {
+        0% {
+            transform: translateY(0) rotateX(90deg);
+        }
+
+        50% {
+            transform: translateY(-1em) rotateX(0deg);
+        }
+
+        100% {
+            transform: translateY(0) rotateX(-90deg);
+        }
+    }
+
+    @keyframes newone {
+        0% {
+            font-size: 3rem;
+        }
+
+        50% {
+            font-size: 3.5rem;
+        }
+
+        100% {
+            font-size: 3rem;
+        }
+    }
+
+    .contentContainer27 {
+        font-family: 'Poppins', sans-seriif;
+        color: #f3a092;
+        font-size: 40px;
+        text-align: center;
+        font-weight: 700;
+        letter-spacing: 2px;
+        max-width: 80%;
+    }
+
+    @media (max-width: 650px) {
+        .leftSide,
+    .rightSide {
+        width: 100%;
+    }
+
+    }
 
 </style>
 
 <body>
-    <script>
+    <div class="banner2Container">
+        <div class="leftSide">
+            <button>Zaloguj się</button>
 
+            <button>Zarejestruj się</button>
+            <div class="contentContainer27">
+                Lorem ipsum dolor sit amet consectetur.
+            </div>
+        </div>
+        <div class="rightSide">
+            <span class="animated-text tilted">
+                Reality is wrong
+            </span>
+
+        </div>
+    </div>
+    <script>
+        const animatedText = document.querySelectorAll(".animated-text");
+        const animate = (element) => {
+            const textArray = element.innerText.split("");
+            element.firstChild.remove();
+
+            const elArray = textArray.map(
+                (letter, index) => {
+                    if (letter == " ") letter = '&nbsp;';
+                    const el = document.createElement("span");
+                    el.className = "letter";
+                    el.innerHTML = letter;
+                    el.style.animationDelay = index / (textArray.length) + "s";
+                    element.appendChild(el);
+                    return el;
+                }
+            );
+            element.innerHtml = elArray;
+        }
+
+        Array.from(animatedText).map(animate)
     </script>
 </body>
 
