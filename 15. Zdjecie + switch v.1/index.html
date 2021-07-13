@@ -163,8 +163,11 @@
         });
 
         setInterval(() => {
-            0 == slideNumber ? switchBTN1.click() : 1 == slideNumber ? switchBTN2.click() : 2 == slideNumber ?
-                switchBTN3.click() : 3 == slideNumber && (switchBTN4.click(), slideNumber = -1), slideNumber++
+            0 == slideNumber ? switchBTN1.click() : 
+            1 == slideNumber ? switchBTN2.click() : 
+            2 == slideNumber ? switchBTN3.click() : 
+            3 == slideNumber && (switchBTN4.click(), 
+            slideNumber = -1), slideNumber++
         }, 8e3);
         
     </script>

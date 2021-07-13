@@ -172,6 +172,7 @@
         let actualSlide = 0;
 
         const offBtnColor = "rgb(180, 175, 175)",
+
             changeRecurringValues = (index, bgColor) => {
                 slider26.style.backgroundImage = `url(${imagePath[index]})`, sliderToChangeBG.style.backgroundColor =
                     bgColor,
@@ -179,7 +180,7 @@
             },
 
             checkSlide = () => {
-                    0 == actualSlide ?
+                0 == actualSlide ?
                     (btnPrevious.style.color = offBtnColor,
                         changeRecurringValues(0, "#e62ed6")) :
                     1 == actualSlide ?
@@ -199,5 +200,3 @@
 </body>
 
 </html>
-
-
