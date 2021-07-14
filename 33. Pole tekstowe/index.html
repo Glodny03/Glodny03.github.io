@@ -10,7 +10,7 @@
 
 <style>
     @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap);
-    @import url(//db.onlinewebfonts.com/c/3f4943f4e662577a8113309f864540a4?family=ITC+Benguiat);
+    @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
     @import url(https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&display=swap);
 
     * {
@@ -51,7 +51,7 @@
     }
 
     .hiddenText__box h1 {
-        font-family: "ITC Benguiat";
+        font-family: "Poppins";
         text-transform: uppercase;
         letter-spacing: 6px;
         margin: 10px 0
@@ -65,7 +65,7 @@
     }
 
     .hiddenText__box p {
-        font-family: "ITC Benguiat";
+        font-family: "Poppins";
         text-align: justify
     }
 
@@ -168,7 +168,8 @@
 
         textContent33BTN.addEventListener("click", () => {
             hiddenText.offsetHeight == textHeight ?
-                (hiddenText.style.height = `${firstHeight}px`, setTimeout(
+                (hiddenText.style.height = `${firstHeight}px`, 
+                setTimeout(
                     () => {
                         textContent33BTN.textContent = "Czytaj dalej"
                     }, 2e3)) :
