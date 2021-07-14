@@ -201,7 +201,8 @@
         textContent33BTN.addEventListener('click', () => {
 
             if (hiddenText.offsetHeight == textHeight) {
-                hiddenText.style.height = '250px';
+                
+        hiddenText.style.height = `${firstHeight}px`;
 
                 setTimeout(() => {
                     textContent33BTN.textContent = 'Czytaj dalej';
